@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en-AU" data-type="service" data-radius="soft" data-buttons="arrow" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ANJ Accounting Group: chartered accountants for people and business</title>
+<meta name="description" content="Tax returns, BAS, bookkeeping, payroll and business setup from a registered tax agent firm. Meet in person, on Zoom or by phone. Free quotes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ANJ Accounting Group: chartered accountants for people and business">
+<meta property="og:description" content="Tax returns, BAS, bookkeeping, payroll and business setup. Ask for a free quote.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f7f4ee">
+<!-- <link rel="canonical" href="https://anjaccountinggroup.com.au/"> : switch on when the new site goes live on the domain -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f7f4ee; --p-surface: #eee7db; --p-ink: #1d1a16; --p-muted: #67645f;
+  --p-accent: #8f5e25; --p-accent-ink: #f7f4ee; --p-action: #8f5e25; --p-action-ink: #f7f4ee;
+  --p-inv-bg: #1d1a16; --p-inv-surface: #292622; --p-inv-ink: #f7f4ee; --p-inv-muted: #9c9993;
+  --p-inv-accent: #8f5e25; --p-inv-accent-ink: #f7f4ee; --p-inv-action: #8f5e25; --p-inv-action-ink: #f7f4ee;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-text: "Libre Franklin", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+  --display-tracking-xl: -0.026em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<link rel="modulepreload" href="assets/moments/picture-develops/moment.js">
+<!-- page CSS: inside visuals only -->
+<style>
+  .nav__logo img { height: 26px; }
+  .footer .nav__logo img { height: 30px; }
+  .rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
+  .svc__photo { position: relative; overflow: hidden; border-radius: var(--r-lg); height: min(640px, var(--ly-fit, 640px)); background: var(--surface); }
+  .svc__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 60%; }
+  .develop { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(560px, var(--ly-fit, 560px)); }
+  .develop > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .creds { display: grid; gap: var(--s-5); margin: var(--s-7) 0 0; padding: 0; list-style: none; }
+  .creds li { display: flex; align-items: center; gap: var(--s-5); }
+  .creds .cred__logo { flex: none; width: 112px; height: 76px; border-radius: var(--r-md); background: #fff; display: grid; place-items: center; overflow: hidden; }
+  .creds .cred__logo img { width: 100%; height: 100%; object-fit: contain; }
+  .creds .cred__mark { flex: none; width: 112px; height: 76px; border-radius: var(--r-md); background: var(--surface); display: grid; place-items: center; }
+  .creds .cred__mark img { width: 56px; height: auto; }
+  .side__photo { position: relative; overflow: hidden; border-radius: var(--r-lg); aspect-ratio: 3 / 2; margin-top: var(--s-7); background: var(--surface); }
+  .side__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .quote__form { background: var(--g-alt, var(--surface)); border-radius: var(--r-lg); padding: var(--s-7); }
+  .footer__col a[href^="mailto:"], .footer__col a[href^="tel:"] { overflow-wrap: anywhere; }
+  .group-label { margin: var(--s-6) 0 var(--s-3); font-weight: 500; }
+  .svc-cols .group-label { margin-top: 0; }
+  .review { display: flex; flex-direction: column; gap: var(--s-4); }
+  .review blockquote { margin: 0; font: 400 var(--t-body)/1.65 var(--font-text); color: var(--ink); flex: 1 1 auto; }
+    .stars { display: flex; gap: 2px; color: var(--accent); }
+  .stars svg { width: 18px; height: 18px; }
+  .rating-line { display: inline-flex; align-items: center; gap: var(--s-3); }
+  .rating-line img { width: 24px; height: 24px; }
+  @media (max-width: 1023px) {
+    .svc__photo { height: auto; aspect-ratio: 4 / 3; margin-top: var(--s-7); }
+    .develop { height: auto; aspect-ratio: 16 / 9; margin-top: var(--s-7); }
+    .quote__form { margin-top: var(--s-7); background: none; padding: 0; border-radius: 0; }
+  }
+  /* the tablet stacks these splits past one screen: two screens there */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #services, #dates, #quote { --h: 2; }
+    /* two screens as two groups, as .g2 does: the words and photograph on the first, the list or form on the second */
+    #dates > .wrap, #quote > .wrap { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); row-gap: calc(var(--padt) + var(--padb) + var(--bar)); }
+    #dates > .wrap > *, #quote > .wrap > * { grid-column: 1; min-height: 0; align-self: start; }
+    .side__photo { aspect-ratio: 4 / 3; }
+    #quote .quote__form { margin-top: 0; }
+    #how:not(.is-live) .mo-pc__visual > img { max-height: 20svh; }
+    /* the three service lists and the three reviews stay side by side, so each section stays one screen */
+    #business .svc-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #business .rows > li { padding-block: var(--s-6); }
+    #reviews .rv-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #business .svc-cols > *, #reviews .rv-row > * { grid-column: auto; }
+    #reviews .review blockquote { font-size: var(--t-small); }
+  }
+  @media (max-width: 639px) {
+    .nav__logo img { height: 19px; }
+    .creds .cred__logo, .creds .cred__mark { width: 88px; height: 60px; }
+    #how:not(.is-live) { height: calc(2 * 100lvh); }
+  }
+</style>
+</head>
+<body>
+<!-- type: service (an accounting firm: people are hired)
+     deal: hero split, nav nav-mega, close close-type, footer footer-columns, rhythm space, buttons arrow,
+           mark: the client's own logo (in place of the dealt arc), palette: the client's logo gold through start.mjs brand,
+           type source-serif (the client's pick of the three dealt pairings; all three fail the hero-lines stress at 1440, waived) -->
+<!--
+     moments: pinned-chapters (#how), picture-develops (#about photograph) -->
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="#top"><img src="assets/brand/anj-logo-horizontal.svg" alt="ANJ Accounting Group" width="254" height="26"></a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#services">Services <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Compliance</p>
+              <a href="#services">Tax returns<span>Personal, company and trust</span></a>
+              <a href="#services">BAS and GST<span>Quarterly or monthly</span></a>
+              <a href="#services">Superannuation<span>Contributions lodged on time</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Management</p>
+              <a href="#business">Bookkeeping<span>Day-to-day transactions</span></a>
+              <a href="#business">Payroll<span>Pay runs by our staff</span></a>
+              <a href="#business">Financial reporting<span>Statements prepared for you</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Advice and setup</p>
+              <a href="#business">Tax planning<span>For any business situation</span></a>
+              <a href="#business">Business restructuring<span>Change how you trade</span></a>
+              <a href="#business">Cloud accounting<span>Which software suits you</span></a>
+            </div>
+            <a class="menu-card span-3" href="#dates">
+              <div class="panel"><img class="frame__img" src="assets/img/photo-f61684735-500.jpg" alt="A desk with a calculator, an open notebook and a laptop in window light" width="500" height="376"></div>
+              <span class="t-card">Tax dates</span>
+              <span class="t-small muted">Every due date in the year</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#how">Process</a></div>
+      <div class="nav__item"><a class="nav__link" href="#dates">Dates</a></div>
+      <div class="nav__item"><a class="nav__link" href="#about">About</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#quote">Get a free quote</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-5">
+        <p class="hero__kicker"><span class="dot" aria-hidden="true"></span>Open Monday to Friday, 9am to 5pm</p>
+        <h1 id="hero-h">Accountants for people and business</h1>
+        <p class="hero__lead">Chartered Accountants for tax returns, BAS, bookkeeping and payroll. Meet in person, on Zoom or by phone.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#quote">Get a free quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#dates">See the tax dates</a></div>
+      </div>
+      <div class="hero__media span-6 start-7">
+        <img src="assets/img/photo-f194674124.jpg" srcset="assets/img/photo-f194674124-500.jpg 500w, assets/img/photo-f194674124-960.jpg 960w, assets/img/photo-f194674124-1280.jpg 1280w, assets/img/photo-f194674124.jpg 1920w" sizes="(max-width: 1023px) 120vw, 1100px" width="1920" height="1280" alt="Reading glasses and two pens on an open ledger of handwritten figures" style="--ly-pos: 58% 60%" fetchpriority="high" decoding="async" data-source="stand-in" data-subject="desk">
+        <div class="ly-float">
+          <div class="ly-float__row"><span>Every month</span><span>The 21st</span></div>
+          <div class="ly-float__title">GST and PAYG withholding due</div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="services" style="--hm: 2" aria-labelledby="services-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="services-h">Accounting and tax services</h2>
+          <p>Every lodgement the ATO asks of you, for individuals and every business structure.</p>
+        </div>
+        <p class="t-label group-label">Compliance</p>
+        <ul class="rows">
+          <li><span class="rows__name">Personal tax returns</span></li>
+          <li><span class="rows__name">Company, trust and partnership tax returns</span></li>
+          <li><span class="rows__name">Rental property schedules</span></li>
+          <li><span class="rows__name">Shares, crypto and capital gains tax</span></li>
+          <li><span class="rows__name">GST and BAS</span></li>
+          <li><span class="rows__name">PAYG withholding and payroll tax</span></li>
+          <li><span class="rows__name">Fuel tax credits, fringe benefits tax and stamp duty</span></li>
+          <li><span class="rows__name">Superannuation lodgement</span></li>
+        </ul>
+      </div>
+      <div class="span-6 start-7">
+        <div class="svc__photo"><img src="assets/img/photo-f61684735.jpg" srcset="assets/img/photo-f61684735-500.jpg 500w, assets/img/photo-f61684735-960.jpg 960w, assets/img/photo-f61684735.jpg 1280w" sizes="(max-width: 1023px) 100vw, 60vw" width="1280" height="962" alt="A desk with a calculator, an open notebook, a pen and a laptop in window light" loading="lazy" decoding="async" data-source="stand-in" data-subject="desk"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="business" style="--hm: 2" aria-labelledby="business-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="business-h">Bookkeeping and advisory services</h2>
+        <p>For businesses that want the books kept and advice on what comes next.</p>
+      </div>
+      <div class="grid grid--top svc-cols">
+        <div class="span-6">
+          <p class="t-label group-label">Management</p>
+          <ul class="rows">
+            <li><span class="rows__name">Bookkeeping<small>Day-to-day transactions, kept up to date</small></span></li>
+            <li><span class="rows__name">Payroll<small>Pay runs handled by our experienced staff</small></span></li>
+            <li><span class="rows__name">Planning<small>Reporting and advice to support the business</small></span></li>
+            <li><span class="rows__name">Financial reporting<small>Financial statements prepared for you</small></span></li>
+            <li><span class="rows__name">Company secretarial<small>Secretarial duties and compliance</small></span></li>
+          </ul>
+        </div>
+        <div class="span-6">
+          <p class="t-label group-label">Advisory</p>
+          <ul class="rows">
+            <li><span class="rows__name">Tax planning<small>Advice for almost any business situation</small></span></li>
+            <li><span class="rows__name">Cash flow analysis<small>Cash flow and liquidity, analysed</small></span></li>
+            <li><span class="rows__name">Cloud accounting<small>Which product suits your business and budget</small></span></li>
+            <li><span class="rows__name">Financial modelling<small>Basic models to plan ahead</small></span></li>
+            <li><span class="rows__name">Business restructuring<small>Changing the structure you trade under</small></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="how-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="how-h">Your quote in three steps</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Tell us your tax and accounting needs</h3>
+            <p>Tell us your type of business and roughly how many transactions you have in a month.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-f194107437.jpg" srcset="assets/img/photo-f194107437-500.jpg 500w, assets/img/photo-f194107437-960.jpg 960w, assets/img/photo-f194107437.jpg 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="A hand with a pen over a notebook of handwritten sums beside a laptop" width="1280" height="853" loading="lazy" decoding="async" data-source="stand-in" data-subject="desk"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>See the price before any work starts</h3>
+            <p>We send a free quote for regular or one-time work. You know the cost before any work starts.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-f55666535.jpg" srcset="assets/img/photo-f55666535-500.jpg 500w, assets/img/photo-f55666535-960.jpg 960w, assets/img/photo-f55666535.jpg 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="A fountain pen on a printed agreement with a blank signature line, in lamp light" width="1280" height="962" loading="lazy" decoding="async" data-source="stand-in" data-subject="desk"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Meet in person or on Zoom</h3>
+            <p>In person, over Zoom, by email or on the phone. Saturdays by appointment.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/photo-d183.jpg" srcset="assets/img/photo-d183-500.jpg 500w, assets/img/photo-d183-960.jpg 960w, assets/img/photo-d183.jpg 1280w" sizes="(max-width: 1023px) 100vw, 50vw" alt="An open notebook with a ribbon marker and a pencil on a dark wooden table" width="1280" height="853" loading="lazy" decoding="async" data-source="library-057" data-subject="desk"></figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews" style="--hm: 2" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="section-head--split">
+        <div>
+          <h2 id="reviews-h">5.0 from 7 Google reviews</h2>
+          <p class="rating-line"><img src="assets/icons/google-icon.svg" alt="Google" width="24" height="24">Every review on our Google profile gives five stars.</p>
+        </div>
+        <a class="link" href="https://maps.google.com/maps?cid=8939796514767134686" rel="noopener">Read all 7 reviews on Google</a>
+      </div>
+      <div class="grid grid--top rv-row" style="margin-top: var(--s-7)">
+        <figure class="card review span-4">
+          <span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg></span>
+          <blockquote>I have been working with Andrew for a while and he has been a pleasure to work with. He has gone above and beyond for every issue we have had. Been dealing with accountants for over 15 yrs and by far he is the best. Highly recommended for personal or business needs.</blockquote>
+          <figcaption class="person"><img src="assets/img/reviews/tausif.png" alt="" width="40" height="40" loading="lazy"><span><span class="person__name">Tausif Junaid</span><span class="person__role">Google review, January 2025</span></span></figcaption>
+        </figure>
+        <figure class="card review span-4">
+          <span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg></span>
+          <blockquote>I initially booked Andy last year for lodging my ITR, as I had no idea how to do it properly when I recently had a small business while also working full time. He was efficient and the communication was very clear and effective. He is also very understanding and charges reasonably well.</blockquote>
+          <figcaption class="person"><img src="assets/img/reviews/vito.png" alt="" width="40" height="40" loading="lazy"><span><span class="person__name">Vito Filip Banaag</span><span class="person__role">Google review, October 2024</span></span></figcaption>
+        </figure>
+        <figure class="card review span-4">
+          <span class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9z"/></svg></span>
+          <blockquote>Andy was amazing, he helped with my year end financials and company taxes. Easy going bloke. He even went out of his way to help me with different aspect of my business. I highly recommend ANJ Accounting Group.</blockquote>
+          <figcaption class="person"><img src="assets/img/reviews/danielle.png" alt="" width="40" height="40" loading="lazy"><span><span class="person__name">Danielle Williams</span><span class="person__role">Google review, November 2022</span></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="dates" style="--hm: 2" aria-labelledby="dates-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="dates-h">Tax dates through the year</h2>
+          <p>The Australian financial year runs from 1 July to 30 June. These are the dates the ATO holds most people and businesses to.</p>
+        </div>
+        <div class="side__photo"><img src="assets/img/photo-f196431272.jpg" srcset="assets/img/photo-f196431272-500.jpg 500w, assets/img/photo-f196431272-960.jpg 960w, assets/img/photo-f196431272.jpg 1280w" sizes="(max-width: 1023px) 130vw, 40vw" width="1280" height="853" alt="An open desk diary beside reading glasses and red and black pencils on a wooden desk" loading="lazy" decoding="async" data-source="stand-in" data-subject="desk"></div>
+      </div>
+      <ul class="rows span-6 start-7">
+        <li><span class="rows__name">Financial year begins</span><span class="rows__value">1 July</span></li>
+        <li><span class="rows__name">Single Touch Payroll finalisation</span><span class="rows__value">14 July</span></li>
+        <li><span class="rows__name">Monthly GST and PAYG withholding<small>Lodgement and payment</small></span><span class="rows__value">21st of each month</span></li>
+        <li><span class="rows__name">Quarterly BAS<small>Lodgement and payment</small></span><span class="rows__value">28 Oct, Feb, Apr, Jul</span></li>
+        <li><span class="rows__name">Super guarantee contributions<small>For each quarter</small></span><span class="rows__value">28 Oct, Jan, Apr, Jul</span></li>
+        <li><span class="rows__name">Tax return, if you lodge it yourself<small>With a registered tax agent the date can be later</small></span><span class="rows__value">31 October</span></li>
+        <li><span class="rows__name">End of the financial year</span><span class="rows__value">30 June</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section g2" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="grid grid--top">
+          <div class="span-5">
+            <div class="section-head">
+              <h2 id="about-h">Chartered Accountants and a registered tax agent</h2>
+              <p>Our team includes experienced Chartered Accountants, with support staff for both personal and business accounting.</p>
+            </div>
+            <ul class="creds">
+              <li><span class="cred__logo"><img src="assets/brand/caanz.jpg" alt="Chartered Accountants Australia and New Zealand" width="320" height="216" loading="lazy"></span><span>Chartered Accountants on the team</span></li>
+              <li><span class="cred__mark"><img src="favicon.svg" alt="" width="56" height="56" loading="lazy"></span><span>Registered with the Tax Practitioners Board as a tax agent firm</span></li>
+            </ul>
+          </div>
+          <figure class="develop span-6 start-7" data-moment="picture-develops"><img src="assets/img/photo-c877.jpg" srcset="assets/img/photo-c877-500.jpg 500w, assets/img/photo-c877-960.jpg 960w, assets/img/photo-c877.jpg 1280w" sizes="(max-width: 1023px) 100vw, 60vw" alt="A close stack of reference books seen from the page edges" width="1280" height="853" loading="lazy" decoding="async" data-source="library-057" data-subject="desk"></figure>
+        </div>
+      </div>
+      <div class="grid grid--top" id="faq">
+        <div class="span-5">
+          <p class="t-lead">We want to be the accounting firm individuals and businesses choose, for the quality of the work and the way we handle it.</p>
+          <p style="margin-top: var(--s-5)"><a class="link" href="#quote">Ask us a question</a></p>
+        </div>
+        <div class="faq span-6 start-7">
+          <details open><summary>When should I contact an accountant?</summary><p>As soon as you start planning a business. We talk through its structure, tax and pricing.</p></details>
+          <details open><summary>What are my options for raising money?</summary><p>Get impartial advice before the bank. Banks want a business plan and organised records; we help with both.</p></details>
+          <details open><summary>Is the quote free?</summary><p>Yes, for regular or one-time work.</p></details>
+          <details open><summary>How do I know an accountant is right for me?</summary><p>They return your calls and you feel heard when you ask a question.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quote" style="--hm: 2" aria-labelledby="quote-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="quote-h">Free quote for regular or one-time work</h2>
+          <p>Every business and family is different. Tell us yours and we reply with a quote.</p>
+        </div>
+        <div class="side__photo"><img src="assets/img/photo-f95306325.jpg" srcset="assets/img/photo-f95306325-500.jpg 500w, assets/img/photo-f95306325-960.jpg 960w, assets/img/photo-f95306325.jpg 1280w" sizes="(max-width: 1023px) 130vw, 40vw" width="1280" height="853" alt="A laptop, a cup of black coffee, two pencils and a note pad on a pale wooden desk, from above" loading="lazy" decoding="async" data-source="stand-in" data-subject="desk"></div>
+      </div>
+      <div class="span-6 start-7 quote__form">
+        <form class="form" action="mailto:accounts@anjaccountinggroup.com.au" method="post" enctype="text/plain" data-endpoint="" data-sent="Your quote request is in. We reply within one business day." novalidate>
+          <div class="field"><label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err">
+            <p class="field__error" id="f-name-err" hidden>Write your name.</p></div>
+          <div class="field"><label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+            <p class="field__error" id="f-email-err" hidden>Write an email address with an @, like name@example.com.</p></div>
+          <div class="field"><label for="f-type">Type of business</label>
+            <input id="f-type" name="business" type="text" autocomplete="organization-title" aria-describedby="f-type-err">
+            <p class="field__error" id="f-type-err" hidden>Write the kind of business, or "personal".</p></div>
+          <div class="field"><label for="f-tx">Transactions a month</label>
+            <input id="f-tx" name="transactions" type="text" inputmode="numeric" autocomplete="off" aria-describedby="f-tx-err">
+            <p class="field__error" id="f-tx-err" hidden>Write a rough number, like 40.</p></div>
+          <div class="field field--full"><label for="f-need">What you need</label>
+            <textarea id="f-need" name="message" rows="4" required aria-describedby="f-need-err"></textarea>
+            <p class="field__error" id="f-need-err" hidden>Write a line about the work you need.</p></div>
+          <div class="btn-row"><button class="btn btn--primary" type="submit">Get a free quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></button></div>
+          <p class="form__status" role="status" data-form-status></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Start with a free quote</h2>
+        <p>Monday to Friday, 9am to 5pm. Saturday by appointment.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="#quote">Get a free quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><img src="assets/brand/anj-logo-horizontal.svg" alt="ANJ Accounting Group" width="254" height="26"></a>
+          <p class="footer__lede">Chartered accountants and a registered tax agent firm.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">Tax and compliance</a></li><li><a href="#business">Bookkeeping</a></li><li><a href="#business">Advisory</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Process</h3><ul><li><a href="#how">How a quote works</a></li><li><a href="#dates">Tax dates</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>About</h3><ul><li><a href="#about">The firm</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">Questions</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="tel:+61410513374">0410 513 374</a></li><li><a href="mailto:accounts@anjaccountinggroup.com.au">Email us</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 ANJ Accounting Group</span>
+        <div class="socials"></div>
+        <a class="credits" href="credits.html">Photographs via Wikimedia Commons</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="#quote">Get a free quote</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
