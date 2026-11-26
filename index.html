@@ -90,6 +90,8 @@
     #reviews .review blockquote { font-size: var(--t-small); }
   }
   @media (max-width: 639px) {
+    /* the Sydney skyline sits low in its frame: a shorter phone crop keeps both hero buttons on the first screen */
+    .hero--photo { --photo: 30svh; }
     .nav__logo img { height: 19px; }
     .creds .cred__logo, .creds .cred__mark { width: 88px; height: 60px; }
     #how:not(.is-live) { height: calc(2 * 100lvh); }
@@ -98,7 +100,7 @@
 </head>
 <body>
 <!-- type: service (an accounting firm: people are hired)
-     deal: hero split, nav nav-mega, close close-type, footer footer-columns, rhythm space, buttons arrow,
+     deal: hero photo (was split; a full-bleed Sydney photograph on the client's request), nav nav-mega, close close-type, footer footer-columns, rhythm space, buttons arrow,
            mark: the client's own logo (in place of the dealt arc), palette: the client's logo gold through start.mjs brand,
            type source-serif (the client's pick of the three dealt pairings; all three fail the hero-lines stress at 1440, waived) -->
 <!--
@@ -150,20 +152,13 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--split" data-enter aria-labelledby="hero-h">
-    <div class="wrap"><div class="hero-text grid hero__grid">
-      <div class="hero__text span-5">
-        <p class="hero__kicker"><span class="dot" aria-hidden="true"></span>Open Monday to Friday, 9am to 5pm</p>
-        <h1 id="hero-h">Accountants for people and business</h1>
-        <p class="hero__lead">Chartered Accountants for tax returns, BAS, bookkeeping and payroll. Meet in person, on Zoom or by phone.</p>
+  <section class="hero hero--photo" data-enter data-calm="left" aria-labelledby="hero-h">
+    <img class="hero__bg" src="assets/img/hero-sydney.jpg" srcset="assets/img/hero-sydney-500.jpg 500w, assets/img/hero-sydney-960.jpg 960w, assets/img/hero-sydney-1280.jpg 1280w, assets/img/hero-sydney.jpg 1800w" sizes="100vw" width="1800" height="900" alt="Sydney's city towers rising behind the Opera House and Circular Quay on a clear afternoon" style="--ly-pos: 60% 50%; --ly-pos-phone: 62% 50%" fetchpriority="high" decoding="async" data-source="client" data-subject="city">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__text">
+        <h1 id="hero-h">Sydney accountants for people and business</h1>
+        <p class="hero__lead">Chartered Accountants for tax returns, BAS, bookkeeping and payroll. Meet in person, on Zoom or by phone, Monday to Friday, 9am to 5pm.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#quote">Get a free quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#dates">See the tax dates</a></div>
-      </div>
-      <div class="hero__media span-6 start-7">
-        <img src="assets/img/photo-f194674124.jpg" srcset="assets/img/photo-f194674124-500.jpg 500w, assets/img/photo-f194674124-960.jpg 960w, assets/img/photo-f194674124-1280.jpg 1280w, assets/img/photo-f194674124.jpg 1920w" sizes="(max-width: 1023px) 120vw, 1100px" width="1920" height="1280" alt="Reading glasses and two pens on an open ledger of handwritten figures" style="--ly-pos: 58% 60%" fetchpriority="high" decoding="async" data-source="stand-in" data-subject="desk">
-        <div class="ly-float">
-          <div class="ly-float__row"><span>Every month</span><span>The 21st</span></div>
-          <div class="ly-float__title">GST and PAYG withholding due</div>
-        </div>
       </div>
     </div></div>
   </section>

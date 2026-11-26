@@ -121,6 +121,94 @@
    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "page": "https://commons.wikimedia.org/wiki/File:Laptop_and_coffee_on_a_desk.jpg",
    "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f57176825-960.jpg",
+   "files": [
+    "photo-f57176825-500.jpg",
+    "photo-f57176825-960.jpg"
+   ],
+   "id": "f57176825",
+   "alt": "Sydney skyline from Waverton Balls head reserve",
+   "by": "Lenny K Photography",
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_from_Waverton_Balls_head_reserve.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f74193115-960.jpg",
+   "files": [
+    "photo-f74193115-500.jpg",
+    "photo-f74193115-960.jpg"
+   ],
+   "id": "f74193115",
+   "alt": "Sydney Skyline Australien",
+   "by": "Dronepicr",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_Skyline_Australien_(126964079).jpeg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f5846929.jpg",
+   "files": [
+    "photo-f5846929-500.jpg",
+    "photo-f5846929-960.jpg",
+    "photo-f5846929.jpg"
+   ],
+   "id": "f5846929",
+   "alt": "Sydney harbour bridge new south wales",
+   "by": "Adam.J.W.C.",
+   "licence": "CC BY 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_harbour_bridge_new_south_wales.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f126916710.jpg",
+   "files": [
+    "photo-f126916710-500.jpg",
+    "photo-f126916710-960.jpg",
+    "photo-f126916710.jpg"
+   ],
+   "id": "f126916710",
+   "alt": "Sydney cityscape",
+   "by": "Dimas H (WMID)",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_cityscape.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f181048146-960.jpg",
+   "files": [
+    "photo-f181048146-500.jpg",
+    "photo-f181048146-960.jpg"
+   ],
+   "id": "f181048146",
+   "alt": "Sunny Sydney Skyline b",
+   "by": "File:Sunny Sydney Skyline.jpg : Douglas P. Perkins derivative work: Georgfotoart",
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Sunny_Sydney_Skyline_b.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f2805031.jpg",
+   "files": [
+    "photo-f2805031-500.jpg",
+    "photo-f2805031-960.jpg",
+    "photo-f2805031-1280.jpg",
+    "photo-f2805031.jpg"
+   ],
+   "id": "f2805031",
+   "alt": "Sydney skyline at dawn",
+   "by": "Karora",
+   "licence": "Public domain",
+   "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "page": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_at_dawn.jpg",
+   "source": "Wikimedia Commons"
   }
  ]
 }
