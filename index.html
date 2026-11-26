@@ -71,11 +71,40 @@
   .footer__col a[href^="mailto:"], .footer__col a[href^="tel:"] { overflow-wrap: anywhere; }
   .group-label { margin: var(--s-6) 0 var(--s-3); font-weight: 500; }
   .svc-cols .group-label { margin-top: 0; }
-  /* the hero h1: "Sydney accountants" is always the first line, whole; its size keeps that line inside the box
-     (the line is about 7.6 times the font size wide) */
+  /* the hero h1: "Trusted Accounting" is always the first line, whole; its size keeps that line inside the box
+     (see the font note below for its width) */
   .hero--photo .hero__text { container-type: inline-size; }
-  .hero--photo h1 { max-width: none; font-size: min(var(--ly-h1-xl), 64px, calc(100cqi / 7.9)); }
+  .hero--photo h1 { max-width: none; font-size: min(var(--ly-h1-xl), 64px, calc(100cqi / 9.8)); }
+  /* the client asked for the banner title in the body's font (Libre Franklin, which runs wider than the
+     serif: the first line is about 9.5 times the font size, hence the 9.8 above) */
+  .hero--photo h1 { font-family: var(--font-text); font-weight: 500; letter-spacing: -0.02em; }
+  /* the title alone, centred on the banner: "Trusted Accounting" large, "for Individuals & Businesses"
+     a smaller, lighter line under it */
+  .hero--photo .hero__text { width: min(100%, 960px); margin-inline: auto; text-align: center; }
+  .hero--photo > .wrap > .hero-text, .hero--photo[data-calm] > .wrap > .hero-text { justify-content: center; }
+  .hero--photo h1 { font-size: min(var(--ly-h1-xl), 84px, calc(100cqi / 9.8)); line-height: 1.05; text-wrap: balance; }
+  .hero--photo h1 .h1-rest { display: block; margin-top: .35em; font-size: .46em; font-weight: 400; letter-spacing: 0; line-height: 1.25; }
+  @media (max-width: 1023px) {
+    .hero--photo > .wrap > .hero-text, .hero--photo[data-calm] > .wrap > .hero-text { justify-content: flex-start; }
+    /* below 1024 the title sits under the photo on the page ground: the page's own ink, not the photo's white */
+    .hero--photo[data-box="none"][data-tone="dark"] { color: var(--p-ink); --ink: var(--p-ink); --muted: var(--p-muted); }
+    /* with only the title under the photo, the hero is as tall as the photo and title, not a whole screen
+       of empty ground */
+    main > .hero.hero--photo { height: auto; min-height: 0; }
+  }
+  /* on the photograph: a soft dark glow behind the title (no box, no hard edge) so the white words read
+     over the busy skyline */
+  @media (min-width: 1024px) {
+    .hero--photo .hero__text { position: relative; isolation: isolate; }
+    .hero--photo .hero__text::before { content: ""; position: absolute; inset: -45% -12%; z-index: -1; pointer-events: none;
+      background: radial-gradient(closest-side, rgb(10 14 20 / .55), rgb(10 14 20 / .3) 55%, transparent); }
+    .hero--photo h1 { font-weight: 600; }
+    .hero--photo h1 .h1-rest { font-weight: 500; }
+  }
   .hero--photo h1 .h1-first { display: block; white-space: nowrap; }
+  /* the client asked for the title alone on the photograph, with no box: a soft shadow keeps the white
+     words legible over the busy skyline (desktop only; below 1024 the words sit under the photo) */
+  @media (min-width: 1024px) { .hero--photo h1 { text-shadow: 0 2px 18px rgb(0 0 0 / .55), 0 1px 3px rgb(0 0 0 / .45); } }
   #business, #quote { background: #ffffff; }
   .field__opt { font-weight: 400; color: var(--muted); }
   /* a field beside one showing an error keeps its label and box at the top of the row */
@@ -121,8 +150,8 @@
     #reviews .review blockquote { font-size: var(--t-small); }
   }
   @media (max-width: 639px) {
-    /* the Sydney skyline sits low in its frame: a shorter phone crop keeps both hero buttons on the first screen */
-    .hero--photo { --photo: 30svh; }
+    /* the Sydney skyline sits low in its frame: a taller phone crop now the title is the hero's only words */
+    .hero--photo { --photo: 40svh; }
     :root { --sec-pad: 56px; }
     .nav__logo img { height: 19px; }
     .creds .cred__logo, .creds .cred__mark { width: 100px; height: 70px; }
@@ -183,13 +212,11 @@
 </header>
 
 <main id="top">
-  <section class="hero hero--photo" data-enter data-calm="left" aria-labelledby="hero-h">
+  <section class="hero hero--photo" data-enter data-calm="left" data-box="none" data-tone="dark" aria-labelledby="hero-h">
     <img class="hero__bg" src="assets/img/hero-sydney.jpg" srcset="assets/img/hero-sydney-500.jpg 500w, assets/img/hero-sydney-960.jpg 960w, assets/img/hero-sydney-1280.jpg 1280w, assets/img/hero-sydney.jpg 1800w" sizes="100vw" width="1800" height="900" alt="Sydney's city towers rising behind the Opera House and Circular Quay on a clear afternoon" style="--ly-pos: 60% 50%; --ly-pos-phone: 62% 50%" fetchpriority="high" decoding="async" data-source="client" data-subject="city">
     <div class="wrap"><div class="hero-text">
       <div class="hero__text">
-        <h1 id="hero-h"><span class="h1-first">Sydney Accountants</span> for people and business</h1>
-        <p class="hero__lead">Chartered Accountants for tax returns, BAS, bookkeeping and payroll. Meet in person, on Zoom or by phone, Monday to Friday, 9am to 5pm.</p>
-        <div class="btn-row"><a class="btn btn--primary" href="#quote">Get a free quote<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#dates">See the tax dates</a></div>
+        <h1 id="hero-h"><span class="h1-first">Trusted Accounting</span> <span class="h1-rest">for Individuals &amp; Businesses</span></h1>
       </div>
     </div></div>
   </section>
