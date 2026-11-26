@@ -1,0 +1,116 @@
+/* The quote form's date and time pickers (assets/booking.js), in the shadcn/ui manner: an outline trigger with
+   an icon, a white popover with a soft border and shadow, a month calendar, and a list of times with a tick. */
+
+.picker { position: relative; }
+.picker__control { position: relative; }
+.picker__control input {
+  padding-left: 40px; cursor: pointer; caret-color: transparent;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.picker[data-picker="time"] .picker__control input { padding-right: 40px; }
+.picker__control input::placeholder { color: var(--muted); opacity: 1; }
+.picker__control input:hover { border-color: color-mix(in oklab, var(--ink) 35%, transparent); }
+.picker__control input[aria-expanded="true"] {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--ink) 12%, transparent);
+}
+.picker__icon, .picker__chev {
+  position: absolute; top: 50%; width: 16px; height: 16px; transform: translateY(-50%); pointer-events: none;
+  fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.picker__icon { left: 14px; }
+.picker__chev { right: 14px; transition: transform .15s ease; }
+.picker__control input[aria-expanded="true"] ~ .picker__chev { transform: translateY(-50%) rotate(180deg); }
+
+/* the popover */
+.picker__pop {
+  position: absolute; left: 0; z-index: 30; margin: 0; padding: 12px;
+  background: #ffffff; color: var(--ink); border: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  border-radius: var(--r-md);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .08), 0 4px 6px -4px rgb(0 0 0 / .08);
+  font: 400 14px/1.4 var(--font-text);
+  transform-origin: top left; animation: picker-in .14s ease-out;
+}
+.picker__pop[hidden] { display: none; }
+.picker__pop.is-above { transform-origin: bottom left; }
+@keyframes picker-in { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .picker__pop { animation: none; } }
+
+/* the calendar */
+.cal__head { position: relative; display: flex; align-items: center; justify-content: center; height: 32px; margin-bottom: 8px; }
+.cal__title { font-weight: 500; font-size: 14px; }
+.cal__nav {
+  position: absolute; top: 2px; display: grid; place-items: center; width: 28px; height: 28px; padding: 0;
+  background: transparent; color: var(--ink); border: 1px solid color-mix(in oklab, var(--ink) 14%, transparent);
+  border-radius: 6px; cursor: pointer; opacity: .75; transition: opacity .15s ease, background-color .15s ease;
+}
+.cal__nav:hover:not(:disabled) { opacity: 1; background: var(--surface); }
+.cal__nav:disabled { opacity: .3; cursor: default; }
+.cal__nav svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cal__nav--prev { left: 0; }
+.cal__nav--next { right: 0; }
+.cal__grid { border-collapse: collapse; }
+.cal__grid th { width: 36px; height: 28px; padding: 0; font-weight: 400; font-size: 12.8px; color: var(--muted); }
+.cal__grid td { width: 36px; height: 36px; padding: 1px 0; text-align: center; }
+.cal__day {
+  width: 36px; height: 36px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--ink);
+  font: inherit; cursor: pointer; transition: background-color .12s ease, color .12s ease;
+}
+.cal__day:hover:not(:disabled):not([aria-selected="true"]) { background: var(--surface); }
+.cal__day.is-today:not([aria-selected="true"]) { background: var(--surface); font-weight: 600; }
+.cal__day[aria-selected="true"] { background: var(--action); color: var(--action-ink); font-weight: 500; }
+.cal__day:disabled { color: var(--muted); opacity: .45; cursor: default; text-decoration: none; }
+.cal__day:focus-visible, .cal__nav:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+.cal__foot { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cal__note { font-size: 12.8px; color: var(--muted); }
+.cal__clear {
+  padding: 4px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--ink);
+  font: 500 12.8px/1.4 var(--font-text); cursor: pointer;
+}
+.cal__clear:hover { background: var(--surface); }
+.cal__clear:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+
+/* the time list */
+.picker__pop--list { right: 0; padding: 4px; max-height: 264px; overflow-y: auto; list-style: none; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: color-mix(in oklab, var(--ink) 20%, transparent) transparent; }
+.picker__pop--list li {
+  position: relative; display: flex; align-items: center; min-height: 34px; padding: 6px 8px 6px 32px;
+  border-radius: 6px; cursor: pointer; user-select: none;
+}
+.picker__pop--list li.is-active { background: var(--surface); }
+.picker__pop--list li[aria-selected="true"] { font-weight: 500; }
+.picker__pop--list li svg {
+  position: absolute; left: 10px; top: 50%; width: 14px; height: 14px; transform: translateY(-50%); visibility: hidden;
+  fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.picker__pop--list li[aria-selected="true"] svg { visibility: visible; }
+.picker__pop--list li.is-muted { color: var(--muted); }
+.picker__sep { height: 1px; min-height: 0 !important; margin: 4px -4px; padding: 0 !important; background: color-mix(in oklab, var(--ink) 10%, transparent); pointer-events: none; }
+
+@media (max-width: 639px) {
+  .picker__pop--cal { left: 50%; translate: -50% 0; transform-origin: top center; }
+  .picker__pop--cal.is-above { transform-origin: bottom center; }
+}
+
+/* "Book an appointment": a shadcn-style checkbox that opens the date and time */
+.booking { display: grid; gap: var(--s-4); }
+.check { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; padding: 2px 0; cursor: pointer; }
+.check > input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
+.check__box {
+  flex: none; display: grid; place-items: center; width: 18px; height: 18px; margin-top: 2px;
+  border: 1px solid var(--ink); border-radius: 4px; background: var(--bg);
+  transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.check__box svg { width: 13px; height: 13px; fill: none; stroke: var(--action-ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round;
+  opacity: 0; transform: scale(.6); transition: opacity .12s ease, transform .12s ease; }
+.check > input:checked + .check__box { background: var(--action); border-color: var(--action); }
+.check > input:checked + .check__box svg { opacity: 1; transform: none; }
+.check:hover .check__box { box-shadow: 0 0 0 3px color-mix(in oklab, var(--ink) 8%, transparent); }
+.check > input:focus-visible + .check__box { outline: 2px solid var(--ink); outline-offset: 2px; }
+.check__text { display: grid; gap: 2px; }
+.check__title { font: 500 var(--t-body)/1.4 var(--font-text); color: var(--ink); }
+.check__hint { font: 400 var(--t-small)/1.4 var(--font-text); color: var(--muted); }
+.booking__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); align-items: start; animation: picker-in .16s ease-out; }
+.booking__fields[hidden] { display: none; }
+@media (max-width: 639px) { .booking__fields { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .booking__fields, .check__box, .check__box svg { animation: none; transition: none; } }
