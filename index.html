@@ -53,18 +53,18 @@
 <style>
   .nav__logo img { height: 26px; }
   .footer .nav__logo img { height: 30px; }
+  /* the footer: the two credential logos under the ANJ logo in place of a line of words; multiply blends
+     their white backgrounds into the footer ground */
+  .footer ul.footer__creds { list-style: none; margin: var(--s-2) 0 0; padding: 0; display: flex; align-items: center; gap: var(--s-7); }
+  .footer__creds img { display: block; width: auto; height: 80px; mix-blend-mode: multiply; }
+  .footer__creds li:last-child img { height: 96px; }
+  /* the About words sit level with the middle of the photo beside them (the logos under them are gone) */
+  #about .grid > .span-5 { align-self: center; }
   .rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-small); }
   .svc__photo { position: relative; overflow: hidden; border-radius: var(--r-lg); height: min(640px, var(--ly-fit, 640px)); background: var(--surface); }
   .svc__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% 60%; }
   .develop { margin: 0; border-radius: var(--r-lg); overflow: hidden; height: min(560px, var(--ly-fit, 560px)); }
   .develop > img { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .creds { display: grid; gap: var(--s-5); margin: var(--s-7) 0 0; padding: 0; list-style: none; }
-  .creds li { display: flex; align-items: center; gap: var(--s-4); }
-  .creds .cred__logo { flex: none; width: 128px; height: 88px; display: grid; place-items: center; }
-  .creds .cred__logo { position: relative; }
-  .creds .cred__logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-  .creds .cred__mark { flex: none; width: 112px; height: 76px; border-radius: var(--r-md); background: var(--surface); display: grid; place-items: center; }
-  .creds .cred__mark img { width: 56px; height: auto; }
   .side__photo { position: relative; overflow: hidden; border-radius: var(--r-lg); aspect-ratio: 3 / 2; margin-top: var(--s-7); background: var(--surface); }
   .side__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .quote__form { background: var(--g-alt, var(--surface)); border-radius: var(--r-lg); padding: var(--s-7); }
@@ -154,7 +154,6 @@
     .hero--photo { --photo: 40svh; }
     :root { --sec-pad: 56px; }
     .nav__logo img { height: 19px; }
-    .creds .cred__logo, .creds .cred__mark { width: 100px; height: 70px; }
   }
 </style>
 </head>
@@ -362,10 +361,6 @@
               <h2 id="about-h">Chartered Accountants and a registered tax agent</h2>
               <p>Our team includes experienced Chartered Accountants, with support staff for both personal and business accounting.</p>
             </div>
-            <ul class="creds">
-              <li><span class="cred__logo"><img src="assets/brand/caanz.png" alt="Chartered Accountants Australia and New Zealand" width="272" height="173" loading="lazy"></span><span>Chartered Accountants on the team</span></li>
-              <li><span class="cred__logo"><img src="assets/brand/tpb-registered-tax-agent.png" alt="Tax Practitioners Board registered tax agent" width="234" height="298" loading="lazy"></span><span>Registered with the Tax Practitioners Board as a tax agent firm</span></li>
-            </ul>
           </div>
           <figure class="develop span-6 start-7" data-moment="picture-develops"><img src="assets/img/photo-c877.jpg" srcset="assets/img/photo-c877-500.jpg 500w, assets/img/photo-c877-960.jpg 960w, assets/img/photo-c877.jpg 1280w" sizes="(max-width: 1023px) 100vw, 60vw" alt="A close stack of reference books seen from the page edges" width="1280" height="853" loading="lazy" decoding="async" data-source="library-057" data-subject="desk"></figure>
         </div>
@@ -457,7 +452,10 @@
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><img src="assets/brand/anj-logo-horizontal.svg" alt="ANJ Accounting Group" width="254" height="26"></a>
-          <p class="footer__lede">Chartered accountants and a registered tax agent firm.</p>
+          <ul class="footer__creds">
+            <li><img src="assets/brand/caanz.png" alt="Chartered Accountants Australia and New Zealand: Chartered Accountants on the team" width="272" height="173" loading="lazy"></li>
+            <li><img src="assets/brand/tpb-registered-tax-agent.png" alt="Registered with the Tax Practitioners Board as a tax agent firm, tax agent number 26156021" width="234" height="298" loading="lazy"></li>
+          </ul>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">Tax and compliance</a></li><li><a href="#business">Bookkeeping</a></li><li><a href="#business">Advisory</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Process</h3><ul><li><a href="#how">How a quote works</a></li><li><a href="#dates">Tax dates</a></li></ul></div>

@@ -96,6 +96,11 @@
     .creds .cred__logo, .creds .cred__mark { width: 88px; height: 60px; }
     #how:not(.is-live) { height: calc(2 * 100lvh); }
   }
+  /* the footer: the two credential logos under the ANJ logo in place of a line of words; multiply blends
+     their white backgrounds into the footer ground */
+  .footer ul.footer__creds { list-style: none; margin: var(--s-2) 0 0; padding: 0; display: flex; align-items: center; gap: var(--s-7); }
+  .footer__creds img { display: block; width: auto; height: 80px; mix-blend-mode: multiply; }
+  .footer__creds li:last-child img { height: 96px; }
 </style>
 </head>
 <body>
@@ -180,7 +185,10 @@
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><img src="assets/brand/anj-logo-horizontal.svg" alt="ANJ Accounting Group" width="254" height="26"></a>
-          <p class="footer__lede">Chartered accountants and a registered tax agent firm.</p>
+          <ul class="footer__creds">
+            <li><img src="assets/brand/caanz.png" alt="Chartered Accountants Australia and New Zealand: Chartered Accountants on the team" width="272" height="173" loading="lazy"></li>
+            <li><img src="assets/brand/tpb-registered-tax-agent.png" alt="Registered with the Tax Practitioners Board as a tax agent firm, tax agent number 26156021" width="234" height="298" loading="lazy"></li>
+          </ul>
         </div>
         <div class="span-2 footer__col"><h3>Services</h3><ul><li><a href="#services">Tax and compliance</a></li><li><a href="#business">Bookkeeping</a></li><li><a href="#business">Advisory</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Process</h3><ul><li><a href="#how">How a quote works</a></li><li><a href="#dates">Tax dates</a></li></ul></div>
